@@ -447,8 +447,8 @@ img.pull-left {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 400px;
-	height: 100px;
+	width: 200px;
+	height: 50px;
 	background: url("../images/logo/siu.png") no-repeat;
 	background-size: contain;
 }
@@ -462,12 +462,11 @@ img.pull-left {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
-	width: 300px;
-	height: 100px;
+	width: 150px;
+	height: 50px;
 	background: url("../images/logo/SCIT.png") no-repeat;
 	background-size: contain;
 }
-
 
 /* Style the active/current link*/
 .header a.active {
@@ -481,15 +480,73 @@ img.pull-left {
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
+@media only screen and (max-width:900px) {
+	.header {
+  overflow: hidden;
+  padding: 5px 5px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  text-align: center;
+  padding: 5px;
+  line-height: 45px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+	width: 200px;
+	height: 50px;
+}
+
+.header a.scitlogo {
+	width: 150px;
+	height: 50px;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+
+}
+
+@media screen and (max-width: 700px)
+ {
+  		.header a
+  		 {
+    		  float: left;
+  				text-align: center;
+  				padding: 3px;
+  				line-height: 45px;
+  				border-radius: 4px;
+ 		 }
+  		.header-right 
+  		{
+   			 float: right;
+ 		 }
+ 		 .header a.logo {
+		width: 100px;
+		height: 20px;
+		}
+
+		.header a.scitlogo {
+			width: 90px;
+			height: 20px;
+		}
+		header {
+		  overflow: hidden;
+		  padding: 5px 5px;
+		}
 }
 
 
@@ -527,15 +584,16 @@ main p {
 	padding: 0;
 }
 
-
 main .site-header .logo {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 0 0px 0;
 	padding: 10px 10px;
+	float:left;
+
 }
 
-main .site-header .logo a {
+/*main .site-header.sproutlogo a {
 	display: block;
 	margin: 0;
 	padding: 60px 30px;
@@ -550,20 +608,25 @@ main .site-header .logo a {
 	background-size: contain;
 }
 
-
-
-
-
-
-
-
-
-
+main .site-header.vistalogo a {
+	display: block;
+	margin: 0;
+	padding: 60px 30px;
+	border: none;
+	outline: none;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	width: 400px;
+	height: 80px;
+	background: url("../images/logo/vista.png") no-repeat;
+	background-size: contain;
+}*/
 
 
 @media only screen and (max-width:900px) {
 	main.row {
-		width: 85%;
+		width: 100%;
 	}
 
 	main h1 {
@@ -579,9 +642,10 @@ main .site-header .logo a {
 	}
 
 	main .site-header .logo a {
-		width: 104px;
-		height: 72px;
+		width: 304px;
+		height: 50px;
 	}
+	
 
 }
 
@@ -913,6 +977,7 @@ main .site-header .logo a {
 	left: 30px;
 	background-size: contain;
 }
+
 
 @media only screen and (max-width:600px) {
 	.modal-toggles {

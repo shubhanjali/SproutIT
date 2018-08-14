@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.imgContainer{
+    float:left;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive "Side-by-Side" Images</h2>
+<p>How to create side-by-side images with the CSS float property. On screens that are 500px wide or less, the images will stack on top of each other instead of next to each other:</p>
+<p>Resize the browser window to see the effect.</p>
+
+<div class="image123">
+    <div class="imgContainer">
+        <img src="../images/logo/logo@2x.png" height="200" width="200"/>
+        <p>This is image 1</p>
+    </div>
+    <div class="imgContainer">
+        <img class="../images/logo/logo@2x.png" src="/images/tv.gif"/ height="200" width="200"/>
+        <p>This is image 2</p>
+    </div>
+    <div class="imgContainer">
+         <img src="../images/logo/logo@2x.png"/ height="200" width="200"/>
+        <p>This is image 3</p>
+    </div>
+</div
+
+</body>
+</html>
